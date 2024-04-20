@@ -1,0 +1,262 @@
+/* General Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f0f0f0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.project {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.project img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.project p {
+    margin-bottom: 10px;
+}
+
+.project a {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5em;
+}
+
+footer {
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        text-align: center;
+        width: 90;
+    }
+
+    nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .project {
+        width: calc(50% - 20px);
+        /* Two projects per row */
+        margin-bottom: 20px;
+        float: left;
+        /* Enable horizontal alignment */
+    }
+
+    .project:nth-child(odd) {
+        margin-right: 20px;
+        /* Add margin to right for odd-numbered projects */
+    }
+
+    .project:last-child {
+        margin-right: 0;
+        /* Remove margin from the last project */
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        width: 100%;
+        /* One project per row */
+        margin-bottom: 20px;
+        float: none;
+        /* Disable horizontal alignment */
+    }
+}
+
+/*nav*/
+.nav {
+    justify-content: space-between;
+    display: flex;
+    padding: 0.2rem;
+    align-items: center;
+    margin: 0;
+}
+
+.navlist {
+    justify-content: space-between;
+    display: flex;
+    align-items: center
+}
+
+.typewrite {
+    text-decoration: none;
+    color: #252525;
+    text-align: justify;
+}
+
+.typewriter {
+    font-size: 3em;
+    align-items: center;
+}
+
+.cta {
+    background-color: #007bff;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color: white;
+    transition: background-color 0.5s ease-in-out;
+    animation: blink 1s infinite alternate;
+}
+
+.logo {
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Sedan', sans-serif;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-svg {
+    padding: 1em;
+    border: 1px solid #ccc;
+}
+
+.skills {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    padding-inline-start: 0;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #007bff;
+    }
+
+    /* Start with default color */
+    100% {
+        background-color: #e24d4d;
+    }
+
+    /* Back to default color */
+}
+
+/* Default font size for all devices */
+.typewriter {
+    font-size: 16px;
+    /* Adjust the default font size as needed */
+}
+
+/* Media query for desktop screens (min-width 768px) */
+@media (min-width: 768px) {
+    .typewriter {
+        font-size: 30px;
+        padding-top: 8em;
+        padding-bottom: 8em;
+        padding-right: 3em;
+        padding-left: 3em;
+        /* Set larger font size for desktop */
+    }
+}
+
+/* Media query for mobile screens (max-width 767px) */
+@media (max-width: 767px) {
+    .typewriter {
+        font-size: 18px;
+        padding-top: 14em;
+        padding-bottom: 16em;
+        padding-right: 3em;
+        padding-left: 3em;
+        /* Set smaller font size for mobile */
+    }
+
+    .nav {
+        display: none;
+    }
+
+    nav ul {
+        list-style: none;
+        margin: 0;
+        padding-top: 10px;
+    }
+
+    .project {
+        width: 90%;
+        /* One project per row */
+        margin-bottom: 20px;
+        padding: 1em;
+    }
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    width: 100%;
+    border-radius: 0.5em;
+    border: #007bff;
+    margin-bottom: 20px;
+}
+
+button a {
+    min-width: 5em;
+    text-decoration: none;
+    background-color: #007bff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 5px;
+    color: white;
+}
+
+.blinking {
+    animation: blink-animation 1s step-start infinite;
+}
+
+@keyframes blink-animation {
+    50%{
+        opacity: 0;
+    }
+  }
